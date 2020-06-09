@@ -5,6 +5,7 @@ pipeline {
       steps {
         withAWS(credentials:'aws-static') {
           s3Upload(file:'index.html', bucket:'davictor-jenkins', path:'index.html')
+        }
       }
     }
   }
